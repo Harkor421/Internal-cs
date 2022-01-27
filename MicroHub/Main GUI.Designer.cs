@@ -51,14 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.firstCustomControl1 = new MicroHub.FirstCustomControl();
-            this.mySecondCustmControl2 = new MicroHub.MySecondCustmControl();
-            this.cuentaGUI2 = new MicroHub.CuentaGUI();
-            this.third1 = new MicroHub.third();
-            this.userControl22 = new MicroHub.UserControl2();
-            this.userControl31 = new MicroHub.UserControl3();
-            this.mySecondCustmControl1 = new MicroHub.MySecondCustmControl();
-            this.cuentaGUI1 = new MicroHub.CuentaGUI();
-            this.userControl21 = new MicroHub.UserControl2();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -369,93 +361,6 @@
             this.firstCustomControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.firstCustomControl1_MouseMove);
             this.firstCustomControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.firstCustomControl1_MouseUp);
             // 
-            // mySecondCustmControl2
-            // 
-            this.mySecondCustmControl2.BackColor = System.Drawing.Color.Transparent;
-            this.mySecondCustmControl2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mySecondCustmControl2.BackgroundImage")));
-            this.mySecondCustmControl2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.mySecondCustmControl2.Location = new System.Drawing.Point(0, 88);
-            this.mySecondCustmControl2.Name = "mySecondCustmControl2";
-            this.mySecondCustmControl2.Size = new System.Drawing.Size(1027, 496);
-            this.mySecondCustmControl2.TabIndex = 22;
-            // 
-            // cuentaGUI2
-            // 
-            this.cuentaGUI2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.cuentaGUI2.Location = new System.Drawing.Point(0, 88);
-            this.cuentaGUI2.Name = "cuentaGUI2";
-            this.cuentaGUI2.Size = new System.Drawing.Size(1027, 492);
-            this.cuentaGUI2.TabIndex = 21;
-            // 
-            // third1
-            // 
-            this.third1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.third1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("third1.BackgroundImage")));
-            this.third1.Location = new System.Drawing.Point(0, 87);
-            this.third1.Name = "third1";
-            this.third1.Size = new System.Drawing.Size(1027, 496);
-            this.third1.TabIndex = 7;
-            this.third1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.third1_MouseDown);
-            this.third1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.third1_MouseMove);
-            this.third1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.third1_MouseUp);
-            // 
-            // userControl22
-            // 
-            this.userControl22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.userControl22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl22.BackgroundImage")));
-            this.userControl22.Location = new System.Drawing.Point(0, 87);
-            this.userControl22.Name = "userControl22";
-            this.userControl22.Size = new System.Drawing.Size(1027, 496);
-            this.userControl22.TabIndex = 12;
-            this.userControl22.MouseDown += new System.Windows.Forms.MouseEventHandler(this.userControl22_MouseDown);
-            this.userControl22.MouseMove += new System.Windows.Forms.MouseEventHandler(this.userControl22_MouseMove);
-            this.userControl22.MouseUp += new System.Windows.Forms.MouseEventHandler(this.userControl22_MouseUp);
-            // 
-            // userControl31
-            // 
-            this.userControl31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.userControl31.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl31.BackgroundImage")));
-            this.userControl31.Location = new System.Drawing.Point(0, 87);
-            this.userControl31.Name = "userControl31";
-            this.userControl31.Size = new System.Drawing.Size(1027, 496);
-            this.userControl31.TabIndex = 9;
-            this.userControl31.MouseDown += new System.Windows.Forms.MouseEventHandler(this.userControl31_MouseDown);
-            this.userControl31.MouseMove += new System.Windows.Forms.MouseEventHandler(this.userControl31_MouseMove);
-            this.userControl31.MouseUp += new System.Windows.Forms.MouseEventHandler(this.userControl31_MouseUp);
-            // 
-            // mySecondCustmControl1
-            // 
-            this.mySecondCustmControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.mySecondCustmControl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mySecondCustmControl1.BackgroundImage")));
-            this.mySecondCustmControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.mySecondCustmControl1.Location = new System.Drawing.Point(0, 87);
-            this.mySecondCustmControl1.Name = "mySecondCustmControl1";
-            this.mySecondCustmControl1.Size = new System.Drawing.Size(1027, 496);
-            this.mySecondCustmControl1.TabIndex = 6;
-            this.mySecondCustmControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mySecondCustmControl1_MouseDown);
-            this.mySecondCustmControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mySecondCustmControl1_MouseMove);
-            this.mySecondCustmControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mySecondCustmControl1_MouseUp);
-            // 
-            // cuentaGUI1
-            // 
-            this.cuentaGUI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.cuentaGUI1.Location = new System.Drawing.Point(2, 87);
-            this.cuentaGUI1.Name = "cuentaGUI1";
-            this.cuentaGUI1.Size = new System.Drawing.Size(1027, 496);
-            this.cuentaGUI1.TabIndex = 15;
-            this.cuentaGUI1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cuentaGUI1_MouseDown);
-            this.cuentaGUI1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.cuentaGUI1_MouseMove);
-            this.cuentaGUI1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.cuentaGUI1_MouseUp);
-            // 
-            // userControl21
-            // 
-            this.userControl21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.userControl21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl21.BackgroundImage")));
-            this.userControl21.Location = new System.Drawing.Point(209, 60);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(817, 523);
-            this.userControl21.TabIndex = 8;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,11 +369,6 @@
             this.Controls.Add(this.button15);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.firstCustomControl1);
-            this.Controls.Add(this.mySecondCustmControl2);
-            this.Controls.Add(this.cuentaGUI2);
-            this.Controls.Add(this.third1);
-            this.Controls.Add(this.userControl22);
-            this.Controls.Add(this.userControl31);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -490,7 +390,6 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button12;
-        private global::MicroHub.UserControl2 userControl21;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
@@ -505,18 +404,12 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button6;
         private FirstCustomControl firstCustomControl1;
-        private CuentaGUI cuentaGUI1;
-        private third third1;
-        private UserControl2 userControl22;
-        private UserControl3 userControl31;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button10;
-        private MySecondCustmControl mySecondCustmControl1;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private CuentaGUI cuentaGUI2;
-        private MySecondCustmControl mySecondCustmControl2;
+
     }
 }
 
