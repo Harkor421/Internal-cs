@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace MicroHub
 {
@@ -17,17 +18,19 @@ namespace MicroHub
         static void Main()
         {
 
-            SetProcessDPIAware();
             Application.SetCompatibleTextRenderingDefault(false);
 
             try
             {
-            string conexions = "Server = 173.201.179.107; database = MicroHub; UID =salgui; password =salgui123";
-            MySqlConnection conexion = new MySqlConnection(conexions);
-            conexion.Open();
 
-            string user = Properties.Settings.Default.username;
-            string pass = Properties.Settings.Default.password;
+                OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
+
+
+
+                Console.WriteLine("Conectado a Access");
+
+                string user = Properties.Settings.Default.username;
+                string pass = Properties.Settings.Default.password;
     
         
                 Console.WriteLine("EJECUTANDO DATOS DE INICIO DE SESIÓN");
@@ -41,9 +44,5 @@ namespace MicroHub
 
         }
         
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern bool SetProcessDPIAware();
-
-
     }
 }

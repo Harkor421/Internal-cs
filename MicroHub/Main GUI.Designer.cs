@@ -49,7 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
             this.firstCustomControl1 = new MicroHub.FirstCustomControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,9 +114,7 @@
             this.button12.Size = new System.Drawing.Size(30, 28);
             this.button12.TabIndex = 4;
             this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
+            this.button12.UseVisualStyleBackColor = true;  // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
@@ -332,30 +329,13 @@
             this.label3.Text = "aaaaaaaaaaaa";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.Red;
-            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.Location = new System.Drawing.Point(803, 516);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(190, 43);
-            this.button15.TabIndex = 19;
-            this.button15.Text = "Cerrar Sesión";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
             // firstCustomControl1
             // 
             this.firstCustomControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.firstCustomControl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("firstCustomControl1.BackgroundImage")));
-            this.firstCustomControl1.Location = new System.Drawing.Point(3, 88);
+            this.firstCustomControl1.Location = new System.Drawing.Point(-2, 88);
             this.firstCustomControl1.Name = "firstCustomControl1";
-            this.firstCustomControl1.Size = new System.Drawing.Size(1026, 496);
+            this.firstCustomControl1.Size = new System.Drawing.Size(1031, 496);
             this.firstCustomControl1.TabIndex = 5;
             this.firstCustomControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.firstCustomControl1_MouseDown);
             this.firstCustomControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.firstCustomControl1_MouseMove);
@@ -366,7 +346,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 583);
-            this.Controls.Add(this.button15);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.firstCustomControl1);
             this.Controls.Add(this.label3);
@@ -406,7 +385,6 @@
         private FirstCustomControl firstCustomControl1;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
 

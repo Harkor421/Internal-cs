@@ -17,11 +17,8 @@ namespace MicroHub
         public Form1()
         {
             InitializeComponent();
-
-            label4.Text = Global.version;
             firstCustomControl1.BringToFront();
             label3.Text = Global.username;
-            button15.Hide();
         }
 
         //No Flicker
@@ -46,12 +43,12 @@ namespace MicroHub
 
         private void button2_Click(object sender, EventArgs e)
         {   
-            mySecondCustmControl2.BringToFront();
+     
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            third1.BringToFront();       
+        
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -62,7 +59,7 @@ namespace MicroHub
         private void button4_Click(object sender, EventArgs e)
         {
         
-            userControl22.BringToFront();
+        
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -72,7 +69,7 @@ namespace MicroHub
 
         private void button5_Click(object sender, EventArgs e)
         {       
-            userControl31.BringToFront();
+
         }
 
 
@@ -97,12 +94,6 @@ namespace MicroHub
             this.WindowState = FormWindowState.Normal;
         }
 
-        private void button12_Click(object sender, EventArgs e)
-        {
-            cuentaGUI2.BringToFront();
-            button15.Show();
-            button15.BringToFront();
-        }
 
         int mov, movX, movY;
         private void mySecondCustmControl1_MouseDown(object sender, MouseEventArgs e)

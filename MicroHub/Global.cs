@@ -12,13 +12,6 @@ namespace MicroHub
     {
         public static string username;
         public static string password;
-        public static string version = "1.0.1";
-        public static int progress;
-
-
-
-       
-
 
         public static string CreateMD5(string input)
         {

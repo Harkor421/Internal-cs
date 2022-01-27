@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2BDDB774-9994-45CD-A910-8A07B4C7AFA6}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MicroHub</RootNamespace>
     <AssemblyName>MicroHub</AssemblyName>
@@ -48,7 +48,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -215,12 +215,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Global.cs" />
-    <Compile Include="CuentaGUI.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CuentaGUI.Designer.cs">
-      <DependentUpon>CuentaGUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="DiscordRpcDemo\DiscordRpc.cs" />
     <Compile Include="Form4.cs">
       <SubType>Form</SubType>
@@ -261,38 +255,11 @@
     <Compile Include="Pantalla de Carga.Designer.cs">
       <DependentUpon>Pantalla de Carga.cs</DependentUpon>
     </Compile>
-    <Compile Include="Specs.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Specs.Designer.cs">
-      <DependentUpon>Specs.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Parte Gratis.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Parte Gratis.Designer.cs">
-      <DependentUpon>Parte Gratis.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Registros Opt.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Registros Opt.Designer.cs">
-      <DependentUpon>Registros Opt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Opt Red.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Opt Red.Designer.cs">
-      <DependentUpon>Opt Red.cs</DependentUpon>
-    </Compile>
     <Compile Include="Toggle.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="CuentaGUI.resx">
-      <DependentUpon>CuentaGUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,9 +279,6 @@
       <DependentUpon>Pantalla de Carga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Specs.resx">
-      <DependentUpon>Specs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -325,15 +289,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Parte Gratis.resx">
-      <DependentUpon>Parte Gratis.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Registros Opt.resx">
-      <DependentUpon>Registros Opt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Opt Red.resx">
-      <DependentUpon>Opt Red.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Micro Opt_TemporaryKey.pfx" />
     <None Include="packages.config" />
