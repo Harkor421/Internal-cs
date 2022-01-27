@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>ftp://microhubco.com/|microhubco.com\|ftp://173.201.179.107/|ftp://ftp.microhubco.com/|C:\Users\Samir\Desktop\Actualizar App\</PublishUrlHistory>
+    <InstallUrlHistory>http://www.microhubco.com/</InstallUrlHistory>
+    <SupportUrlHistory>http://www.microhubco.com|http://www.microhubco.com/</SupportUrlHistory>
+    <UpdateUrlHistory>http://www.microhubco.com/</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>
