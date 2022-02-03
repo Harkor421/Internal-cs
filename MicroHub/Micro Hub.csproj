@@ -228,6 +228,12 @@
     <Compile Include="Login and Register.Designer.cs">
       <DependentUpon>Login and Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Data.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Data.Designer.cs">
+      <DependentUpon>User Data.cs</DependentUpon>
+    </Compile>
     <Compile Include="OvalButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -265,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login and Register.resx">
       <DependentUpon>Login and Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Data.resx">
+      <DependentUpon>User Data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main Page.resx">
       <DependentUpon>Main Page.cs</DependentUpon>
