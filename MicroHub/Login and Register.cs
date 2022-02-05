@@ -174,7 +174,9 @@ namespace MicroHub
 
                         Global.username = textBox1.Text;
                         Global.password = textBox2.Text;
-
+                        OleDbCommand cm = new OleDbCommand("select completename from usuario where email='" + textBox1.Text + "' and password='" + textBox2.Text + "'", con);
+                        Global.name = cm.ExecuteScalar().ToString();
+                        Console.WriteLine(Global.name);
                         Form2 form = new Form2();
                         form.Show();
                         this.Hide();
