@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MicroHub</RootNamespace>
     <AssemblyName>MicroHub</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
@@ -228,12 +228,6 @@
     <Compile Include="Login and Register.Designer.cs">
       <DependentUpon>Login and Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Data.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Data.Designer.cs">
-      <DependentUpon>User Data.cs</DependentUpon>
-    </Compile>
     <Compile Include="OvalButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -271,9 +265,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login and Register.resx">
       <DependentUpon>Login and Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Data.resx">
-      <DependentUpon>User Data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main Page.resx">
       <DependentUpon>Main Page.cs</DependentUpon>
@@ -375,7 +366,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

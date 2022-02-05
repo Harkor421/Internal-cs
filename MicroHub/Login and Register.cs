@@ -94,6 +94,33 @@ namespace MicroHub
 
         private void Login_and_Register_Load(object sender, EventArgs e)
         {
+            if (WindowsIdentity.GetCurrent().Owner == WindowsIdentity.GetCurrent().User)   // Check for Admin privileges   
+            {
+                try
+                {
+                    this.Visible = false;
+                    ProcessStartInfo info = new ProcessStartInfo(Application.ExecutablePath); // my own .exe
+                    info.UseShellExecute = true;
+                    info.Verb = "runas";   // invoke UAC prompt
+                    Process.Start(info);
+                }
+                catch (Win32Exception ex)
+                {
+                    if (ex.NativeErrorCode == 1223) //The operation was canceled by the user.
+                    {
+                        MessageBox.Show("Debes aceptar los permisos de administrador para hacer uso del app");
+                        Application.Exit();
+                    }
+                    else
+                        throw new Exception("Something went wrong :-(");
+                }
+                Application.Exit();
+            }
+            else
+            {
+                //    MessageBox.Show("I have admin privileges :-)");
+            }
+
 
 
 
