@@ -18,7 +18,6 @@ namespace MicroHub
         {
             InitializeComponent();
             firstCustomControl1.BringToFront();
-            label3.Text = Global.username;
         }
 
         //No Flicker
