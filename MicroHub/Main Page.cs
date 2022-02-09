@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.OleDb;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -12,8 +13,17 @@ namespace MicroHub
         {
             InitializeComponent();
             label1.Text = "Welcome Back " + Global.name;
+            usercount();
         }
 
+        private void usercount()
+        {
 
+            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
+            con.Open();
+            OleDbCommand cm = new OleDbCommand("select count (user_id) from userdata", con);
+            label3.Text = cm.ExecuteScalar().ToString();
+
+        }
     }
 }
