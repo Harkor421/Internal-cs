@@ -163,10 +163,23 @@ namespace MicroHub
 
                 try
                 {
+                OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
+                con.Open();
+                OleDbCommand cmd = new OleDbCommand ("select password from usuario where email = '" + textBox1.Text + "'", con);
+                Console.Write("encontrando contra");
+                String expected = cmd.ExecuteScalar().ToString();
+                Console.Write("Expected HASH " + expected);
+                Console.WriteLine("Hash encontrado");
 
-                    OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
-                    con.Open();
-                    OleDbCommand cmd = new OleDbCommand("select * from usuario where email='" + textBox1.Text + "' and password='" + textBox2.Text + "'", con);
+
+                String enpass = Global.MD5Encode(textBox2.Text, expected);
+                Console.WriteLine(enpass);
+                Console.WriteLine("Contra descifrada");
+
+
+
+
+                    cmd = new OleDbCommand("select * from usuario where email='" + textBox1.Text + "' and password='" + enpass + "'", con);
                     OleDbDataReader dr = cmd.ExecuteReader();
                     if (dr.Read() == true)
                     {
@@ -174,7 +187,7 @@ namespace MicroHub
 
                         Global.username = textBox1.Text;
                         Global.password = textBox2.Text;
-                        OleDbCommand cm = new OleDbCommand("select completename from usuario where email='" + textBox1.Text + "' and password='" + textBox2.Text + "'", con);
+                        OleDbCommand cm = new OleDbCommand("select completename from usuario where email='" + textBox1.Text + "' and password='" + enpass + "'", con);
                         Global.name = cm.ExecuteScalar().ToString();
                         Console.WriteLine(Global.name);
                         Form2 form = new Form2();
