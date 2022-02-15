@@ -609,7 +609,6 @@ C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\System.Security.AccessControl.xml
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\System.Security.Principal.Windows.xml
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\System.ValueTuple.xml
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.AssemblyReference.cache
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Interop.Shell32.dll
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.ResolveComReference.cache
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Form4.resources
@@ -625,3 +624,4 @@ C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.CopyComplete
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.exe
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.pdb
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.AssemblyReference.cache

@@ -13,16 +13,21 @@ namespace MicroHub
         {
             InitializeComponent();
             label1.Text = "Welcome Back " + Global.name;
-            usercount();
-        }
-
-        private void usercount()
-        {
-
+            try
+            {
             OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
             con.Open();
             OleDbCommand cm = new OleDbCommand("select count (user_id) from userdata", con);
             label3.Text = cm.ExecuteScalar().ToString();
+            }
+            catch
+            {
+                Console.WriteLine("Error");
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }
