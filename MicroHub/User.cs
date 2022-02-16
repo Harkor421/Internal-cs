@@ -34,7 +34,7 @@ namespace MicroHub
             command.CommandText = "select user_name,user_pass,user_email, user_ID from Users";
             try
             {
-                ds = new OleDbDataAdapter("select user_name,user_pass,user_email, user_ID from Users", con);
+                ds = new OleDbDataAdapter("select user_ID,user_name,user_pass,user_email, username from Users", con);
                 oleCommandBuilder = new OleDbCommandBuilder(ds);
                 ds.Fill(dataTable);
                 bindingSource = new BindingSource { DataSource = dataTable };
@@ -44,7 +44,7 @@ namespace MicroHub
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            con.Close();
 
         }
 
@@ -59,6 +59,28 @@ namespace MicroHub
         private void button1_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+
+                foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+                {
+                    dataGridView1.Rows.RemoveAt(item.Index);
+                }
+
+
+                OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand("DELETE FROM Users WHERE user_ID" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                    MessageBox.Show("deleted");
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
-    }
+     }
 }
