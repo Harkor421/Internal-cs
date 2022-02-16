@@ -23,7 +23,7 @@ namespace MicroHub
         {
             OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
             con.Open();
-            OleDbDataAdapter dataadapter = new OleDbDataAdapter("select * from Users", con);
+            OleDbDataAdapter dataadapter = new OleDbDataAdapter("select user_name,user_pass,user_email, user_ID from Users", con);
             DataSet ds = new DataSet();
             dataadapter.Fill(ds, "Users");
             con.Close();
