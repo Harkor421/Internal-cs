@@ -45,7 +45,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.firstCustomControl1 = new MicroHub.FirstCustomControl();
+            this.firstCustomControl2 = new MicroHub.FirstCustomControl();
+            this.user1 = new MicroHub.User();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -273,25 +274,31 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // firstCustomControl1
+            // firstCustomControl2
             // 
-            this.firstCustomControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.firstCustomControl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("firstCustomControl1.BackgroundImage")));
-            this.firstCustomControl1.Location = new System.Drawing.Point(189, 0);
-            this.firstCustomControl1.Name = "firstCustomControl1";
-            this.firstCustomControl1.Size = new System.Drawing.Size(840, 585);
-            this.firstCustomControl1.TabIndex = 5;
-            this.firstCustomControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.firstCustomControl1_MouseDown);
-            this.firstCustomControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.firstCustomControl1_MouseMove);
-            this.firstCustomControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.firstCustomControl1_MouseUp);
+            this.firstCustomControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.firstCustomControl2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("firstCustomControl2.BackgroundImage")));
+            this.firstCustomControl2.Location = new System.Drawing.Point(188, 0);
+            this.firstCustomControl2.Name = "firstCustomControl2";
+            this.firstCustomControl2.Size = new System.Drawing.Size(840, 585);
+            this.firstCustomControl2.TabIndex = 19;
+            // 
+            // user1
+            // 
+            this.user1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.user1.Location = new System.Drawing.Point(188, -1);
+            this.user1.Name = "user1";
+            this.user1.Size = new System.Drawing.Size(840, 585);
+            this.user1.TabIndex = 20;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 583);
+            this.Controls.Add(this.firstCustomControl2);
+            this.Controls.Add(this.user1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.firstCustomControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -324,7 +331,8 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label2;
-
+        private FirstCustomControl firstCustomControl2;
+        private User user1;
     }
 }
 

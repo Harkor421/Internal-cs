@@ -449,11 +449,19 @@ C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\Micro
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.CopyComplete
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.exe
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.pdb
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\images\0.jpg
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\images\1.png
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\images\3.png
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\images\4.png
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\images\5.png
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Interop.Shell32.dll
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.ResolveComReference.cache
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Form4.resources
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Login_and_Register.resources
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.FirstCustomControl.resources
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Form1.resources
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\ePOSOne.btnProduct.Button_WOC.resources
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Form2.resources
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Properties.Resources.resources
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.User.resources
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.GenerateResource.cache
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.exe.licenses
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.CoreCompileInputs.cache
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\MicroHub.exe.config
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\MicroHub.exe
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\MicroHub.pdb
@@ -609,18 +617,6 @@ C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\System.Security.AccessControl.xml
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\System.Security.Principal.Windows.xml
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\bin\Release\System.ValueTuple.xml
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Interop.Shell32.dll
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.ResolveComReference.cache
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Form4.resources
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Login_and_Register.resources
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.FirstCustomControl.resources
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Form1.resources
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\ePOSOne.btnProduct.Button_WOC.resources
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Form2.resources
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Properties.Resources.resources
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.GenerateResource.cache
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.exe.licenses
-C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.CoreCompileInputs.cache
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.CopyComplete
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.exe
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.pdb

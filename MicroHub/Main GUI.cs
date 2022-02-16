@@ -17,7 +17,7 @@ namespace MicroHub
         public Form1()
         {
             InitializeComponent();
-            firstCustomControl1.BringToFront();
+            firstCustomControl2.BringToFront();
         }
 
         //No Flicker
@@ -37,7 +37,7 @@ namespace MicroHub
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            firstCustomControl1.BringToFront();
+            firstCustomControl2.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace MicroHub
 
         private void button4_Click(object sender, EventArgs e)
         {
-        
+            user1.BringToFront();
         
         }
 

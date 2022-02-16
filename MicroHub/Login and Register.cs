@@ -12,7 +12,6 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DiscordRpcDemo;
 using System.Data.OleDb;
 
 namespace MicroHub

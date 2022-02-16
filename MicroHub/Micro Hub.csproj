@@ -215,7 +215,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Global.cs" />
-    <Compile Include="DiscordRpcDemo\DiscordRpc.cs" />
     <Compile Include="Form4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +259,12 @@
     <Compile Include="Toggle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +294,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Micro Opt_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -329,21 +337,6 @@
   <ItemGroup>
     <Content Include="ico.ico" />
     <Content Include="iconforapp.ico" />
-    <Content Include="images\0.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\3.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\4.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\5.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\pantalla de carga 21.png" />
     <None Include="Resources\pantalla de carga 2.png" />
     <None Include="Resources\gpu logo.png" />
@@ -366,7 +359,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
