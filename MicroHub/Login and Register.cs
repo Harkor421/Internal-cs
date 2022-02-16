@@ -94,35 +94,6 @@ namespace MicroHub
 
         private void Login_and_Register_Load(object sender, EventArgs e)
         {
-            if (WindowsIdentity.GetCurrent().Owner == WindowsIdentity.GetCurrent().User)   // Check for Admin privileges   
-            {
-                try
-                {
-                    this.Visible = false;
-                    ProcessStartInfo info = new ProcessStartInfo(Application.ExecutablePath); // my own .exe
-                    info.UseShellExecute = true;
-                    info.Verb = "runas";   // invoke UAC prompt
-                    Process.Start(info);
-                }
-                catch (Win32Exception ex)
-                {
-                    if (ex.NativeErrorCode == 1223) //The operation was canceled by the user.
-                    {
-                        MessageBox.Show("Debes aceptar los permisos de administrador para hacer uso del app");
-                        Application.Exit();
-                    }
-                    else
-                        throw new Exception("Something went wrong :-(");
-                }
-                Application.Exit();
-            }
-            else
-            {
-                //    MessageBox.Show("I have admin privileges :-)");
-            }
-
-
-
 
             if (Properties.Settings.Default.username != string.Empty)
             {
@@ -165,7 +136,7 @@ namespace MicroHub
                 {
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
                 con.Open();
-                OleDbCommand cmd = new OleDbCommand ("select password from usuario where email = '" + textBox1.Text + "'", con);
+                OleDbCommand cmd = new OleDbCommand ("select user_pass from Users where user_email = '" + textBox1.Text + "'", con);
                 Console.Write("encontrando contra");
                 String expected = cmd.ExecuteScalar().ToString();
                 Console.Write("Expected HASH " + expected);
@@ -179,15 +150,14 @@ namespace MicroHub
 
 
 
-                    cmd = new OleDbCommand("select * from usuario where email='" + textBox1.Text + "' and password='" + enpass + "'", con);
+                    cmd = new OleDbCommand("select * from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con);
                     OleDbDataReader dr = cmd.ExecuteReader();
                     if (dr.Read() == true)
                     {
-                        MessageBox.Show("Login Successful");
-
+                        
                         Global.username = textBox1.Text;
                         Global.password = textBox2.Text;
-                        OleDbCommand cm = new OleDbCommand("select completename from usuario where email='" + textBox1.Text + "' and password='" + enpass + "'", con);
+                        OleDbCommand cm = new OleDbCommand("select user_name from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con);
                         Global.name = cm.ExecuteScalar().ToString();
                         Console.WriteLine(Global.name);
                         Form2 form = new Form2();
@@ -197,7 +167,7 @@ namespace MicroHub
                     }
                     else
                     {
-                        MessageBox.Show("Invalid Credentials, Please Re-Enter");
+                    label8.Text = "Invalid Credentials, Please Re-Enter";
                     }
 
                 }

@@ -17,7 +17,7 @@ namespace MicroHub
             {
             OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
             con.Open();
-            OleDbCommand cm = new OleDbCommand("select count (user_id) from userdata", con);
+            OleDbCommand cm = new OleDbCommand("select count (user_ID) from Users", con);
             label3.Text = cm.ExecuteScalar().ToString();
             }
             catch
