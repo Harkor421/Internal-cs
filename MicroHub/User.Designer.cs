@@ -103,9 +103,9 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(633, 126);
+            this.button4.Location = new System.Drawing.Point(588, 128);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(182, 56);
+            this.button4.Size = new System.Drawing.Size(227, 56);
             this.button4.TabIndex = 9;
             this.button4.Text = "Save Changes";
             this.button4.UseVisualStyleBackColor = false;
@@ -120,9 +120,9 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(633, 252);
+            this.button1.Location = new System.Drawing.Point(588, 252);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 56);
+            this.button1.Size = new System.Drawing.Size(227, 56);
             this.button1.TabIndex = 10;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = false;
