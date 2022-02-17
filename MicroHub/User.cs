@@ -30,9 +30,10 @@ namespace MicroHub
 
             OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");//databaseconnection
             con.Open();
-
-            OleDbCommand cmd = new OleDbCommand("", con);
+            //Query to count the amount of users who have the application downloaded. 
+            OleDbCommand cmd = new OleDbCommand("SELECT COUNT (download_status) FROM Downloads WHERE download_status = 1", con);
             String userdown = cmd.ExecuteScalar().ToString();
+            label5.Text = userdown;
 
 
         }
@@ -109,5 +110,18 @@ namespace MicroHub
                 Console.WriteLine(ex);
             }
         }
-     }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            String search = textBox1.Text;
+            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
+            con.Open();
+
+
+
+
+
+        }
+    }
 }
