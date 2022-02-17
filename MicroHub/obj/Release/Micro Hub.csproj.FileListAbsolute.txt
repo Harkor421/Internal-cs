@@ -273,11 +273,6 @@ C:\Users\sekes\OneDrive\Escritorio\optimizationapp\MicroHub\bin\Release\Microsof
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp\MicroHub\bin\Release\Microsoft.Extensions.Options.xml
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp\MicroHub\bin\Release\Microsoft.Extensions.Primitives.xml
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp\MicroHub\bin\Release\Newtonsoft.Json.xml
-C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\images\0.jpg
-C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\images\1.png
-C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\images\3.png
-C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\images\4.png
-C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\images\5.png
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\MicroHub.exe.config
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\MicroHub.exe
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\MicroHub.pdb
@@ -621,3 +616,4 @@ C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.exe
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.pdb
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.AssemblyReference.cache
+C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.User.resources
