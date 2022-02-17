@@ -22,25 +22,33 @@ namespace MicroHub
             InitializeComponent();
             loaddb();
             dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[0].HeaderText = "ID"; //Setting the names for the columns in the DataGrid
             dataGridView1.Columns[1].HeaderText = "Name";
             dataGridView1.Columns[2].HeaderText = "Password";
             dataGridView1.Columns[3].HeaderText = "Email";
             dataGridView1.Columns[3].HeaderText = "Username";
-        }
 
+            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");//databaseconnection
+            con.Open();
+
+            OleDbCommand cmd = new OleDbCommand("", con);
+            String userdown = cmd.ExecuteScalar().ToString();
+
+
+        }
+        //Subprocedure that belongs to the display of the database in the datagrid and bind any changes to the database.
         private void loaddb()
         {
             dataGridView1.DataSource = null;
-            dataTable.Clear();
-            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
+            dataTable.Clear(); //Clears the datatable for refreshing any changes
+            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");//databaseconnection
             con.Open();
             try
             {
-                ds = new OleDbDataAdapter("select user_ID,user_name,user_pass,user_email, username from Users", con);
+                ds = new OleDbDataAdapter("select user_ID,user_name,user_pass,user_email, username from Users", con); //Query to display the wanted columns in the DB
                 oleCommandBuilder = new OleDbCommandBuilder(ds);
                 ds.Fill(dataTable);
-                bindingSource = new BindingSource { DataSource = dataTable };
+                bindingSource = new BindingSource { DataSource = dataTable };// Binds any changes done in the datagrid with the database
                 dataGridView1.DataSource = bindingSource;
             }
             catch (Exception ex)
@@ -51,10 +59,11 @@ namespace MicroHub
 
         }
 
+        //Subprodcedure that belongs to the button for saving any changes done in the datagrid.
         private void button4_Click(object sender, EventArgs e)
         {
-            dataGridView1.EndEdit(); //very important step
-            ds.Update(dataTable);
+            dataGridView1.EndEdit(); 
+            ds.Update(dataTable); //Updates the information in the Database
             MessageBox.Show("Changes have been saved");
             loaddb();
         }

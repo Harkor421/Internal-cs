@@ -34,17 +34,7 @@ namespace MicroHub
 
 
         private static string itoa64 = "./0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        /*/
-            public static void Main(string[] args)
-            {
-                string StrPassword = "Push@123";
-                string expected = "$P$BGW0cKLlkN6VlZ7OqRUvIY1Uvo/Bh9/";
-                string computed = MD5Encode(StrPassword, expected);
-                Console.WriteLine(StrPassword);
-                Console.WriteLine(computed);
-                Console.WriteLine("Are equal? " + expected.Equals(computed));
-            }
-        /**/
+
         public static string MD5Encode(string password, string hash)
         {
             string output = "*0";
