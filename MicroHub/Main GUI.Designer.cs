@@ -47,6 +47,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.firstCustomControl2 = new MicroHub.FirstCustomControl();
             this.user1 = new MicroHub.User();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -105,6 +106,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.button12);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button4);
@@ -130,13 +132,12 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(4, 170);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(182, 87);
             this.button4.TabIndex = 8;
-            this.button4.Text = "      Optimización ";
+            this.button4.Text = "Users";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -291,6 +292,24 @@
             this.user1.Size = new System.Drawing.Size(840, 585);
             this.user1.TabIndex = 20;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Red;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 505);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(186, 66);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Close ";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +352,7 @@
         private System.Windows.Forms.Label label2;
         private FirstCustomControl firstCustomControl2;
         private User user1;
+        private System.Windows.Forms.Button button7;
     }
 }
 

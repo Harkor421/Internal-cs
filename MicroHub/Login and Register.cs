@@ -81,6 +81,7 @@ namespace MicroHub
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+        
             Form2 form = new Form2();
             form.Show();
             this.Hide();
@@ -93,7 +94,7 @@ namespace MicroHub
 
         private void Login_and_Register_Load(object sender, EventArgs e)
         {
-
+            //Fills the text fields with the saved user_email and password when form loads.
             if (Properties.Settings.Default.username != string.Empty)
             {
                 textBox1.Text = Properties.Settings.Default.username;
@@ -112,6 +113,7 @@ namespace MicroHub
         private void button_WOC1_Click(object sender, EventArgs e)
         {
           
+            // If the checkbox remind me is checked, the username and password typed, will be stored on a local config file 
 
                 if (checkBox1.Checked == true)
                 {
@@ -120,7 +122,8 @@ namespace MicroHub
                     Properties.Settings.Default.Save();
                     Console.WriteLine("datos guardados");
                 }
-
+            //  Else the config file will be deleted. 
+              
                 if (checkBox1.Checked == false)
                 {
                     Properties.Settings.Default.username = "";
@@ -131,32 +134,32 @@ namespace MicroHub
 
 
 
-                try
+                try //Try to see if there's connection with database, and catch any errors such as not typing in the textfields. 
                 {
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
                 con.Open();
-                OleDbCommand cmd = new OleDbCommand ("select user_pass from Users where user_email = '" + textBox1.Text + "'", con);
+                OleDbCommand cmd = new OleDbCommand ("select user_pass from Users where user_email = '" + textBox1.Text + "'", con); //Query to find the user_password by email.
                 Console.Write("encontrando contra");
                 String expected = cmd.ExecuteScalar().ToString();
-                Console.Write("Expected HASH " + expected);
+                Console.Write("Expected HASH " + expected); // Finds expected hashed password in the database corresponding to that user.
                 Console.WriteLine("Hash encontrado");
 
 
-                String enpass = Global.MD5Encode(textBox2.Text, expected);
+                String enpass = Global.MD5Encode(textBox2.Text, expected); // Hashes the current password typed.
                 Console.WriteLine(enpass);
                 Console.WriteLine("Contra descifrada");
 
 
 
 
-                    cmd = new OleDbCommand("select * from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con);
+                    cmd = new OleDbCommand("select * from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Logs in with the encrypted typed password and email.
                     OleDbDataReader dr = cmd.ExecuteReader();
                     if (dr.Read() == true)
                     {
                         
                         Global.username = textBox1.Text;
                         Global.password = textBox2.Text;
-                        OleDbCommand cm = new OleDbCommand("select user_name from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con);
+                        OleDbCommand cm = new OleDbCommand("select user_name from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Gets name of the user.
                         Global.name = cm.ExecuteScalar().ToString();
                         Console.WriteLine(Global.name);
                         Form2 form = new Form2();

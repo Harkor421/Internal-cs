@@ -215,6 +215,10 @@ namespace MicroHub
 
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void mySecondCustmControl1_MouseUp(object sender, MouseEventArgs e)
         {

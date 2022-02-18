@@ -20,7 +20,8 @@ namespace MicroHub
         public User()
         {
             InitializeComponent();
-
+            try
+            {
             OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");//databaseconnection
             con.Open();
             //Query to count the amount of users who have the application downloaded. 
@@ -32,28 +33,45 @@ namespace MicroHub
             label4.Text = cm.ExecuteScalar().ToString();
             label5.Text = userdown;
 
+            //Loads database.
+            String f = "";
+            loaddb(f);
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         //Subprocedure that belongs to the display of the database in the datagrid and bind any changes to the database.
         private void loaddb(String search)
         {
             dataGridView1.DataSource = null;
             dataTable.Clear(); //Clears the datatable for refreshing any changes
-            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");//databaseconnection
-            con.Open();
+           
             try
             {
-                ds = new OleDbDataAdapter("SELECT user_ID, user_name, user_pass, user_email, username FROM Users WHERE User_ID LIKE '**' AND (user_email LIKE  '**' OR user_name LIKE '**' OR user_pass LIKE '**');", con); //Query to display the wanted columns in the DB
+                OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");//databaseconnection
+                con.Open();
+                ds = new OleDbDataAdapter("SELECT user_ID, user_name, user_pass, user_email, username FROM Users WHERE User_ID LIKE '%%' AND (user_email LIKE  '%"+ search + "%' OR user_name LIKE '%"+ search + "%' OR user_pass LIKE '%"+ search + "%');", con); //Query to display the wanted columns in the DB
                 oleCommandBuilder = new OleDbCommandBuilder(ds);
                 ds.Fill(dataTable);
                 bindingSource = new BindingSource { DataSource = dataTable };// Binds any changes done in the datagrid with the database
                 dataGridView1.DataSource = bindingSource;
+                con.Close();
+                dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[0].HeaderText = "ID"; //Setting the names for the columns in the DataGrid
+                dataGridView1.Columns[1].HeaderText = "Name";
+                dataGridView1.Columns[2].HeaderText = "Password";
+                dataGridView1.Columns[3].HeaderText = "Email";
+                dataGridView1.Columns[3].HeaderText = "Username";
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            con.Close();
+          
 
         }
 
@@ -77,15 +95,16 @@ namespace MicroHub
                 DialogResult dialogResult = MessageBox.Show("You are about to delete a user permanently from the Database, are you sure?", "WARNING", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    //do something
-               
 
                 //Gets the index from the selected row in the datagrid.
                 int selectedIndex = dataGridView1.CurrentCell.RowIndex;
 
                 //Turns it into a UserID, so the information can be deleted in the database.
                 int rowID = Convert.ToInt32(dataGridView1.CurrentCell.RowIndex);
-                OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
+                    try
+                    {
+
+                    OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
                     con.Open();
                     OleDbCommand cmd = new OleDbCommand("DELETE FROM Users WHERE user_ID=" + rowID + "", con);
                     cmd.ExecuteNonQuery();
@@ -93,6 +112,11 @@ namespace MicroHub
                     con.Close();
                     MessageBox.Show("deleted");
 
+                    }
+                    catch(Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
                  //Deletion of the row in the dataGridView
                   dataGridView1.Rows.RemoveAt(selectedIndex);
 
@@ -113,13 +137,6 @@ namespace MicroHub
         {
             String search = textBox1.Text;
             loaddb(search);
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Columns[0].HeaderText = "ID"; //Setting the names for the columns in the DataGrid
-            dataGridView1.Columns[1].HeaderText = "Name";
-            dataGridView1.Columns[2].HeaderText = "Password";
-            dataGridView1.Columns[3].HeaderText = "Email";
-            dataGridView1.Columns[3].HeaderText = "Username";
-
 
 
         }
