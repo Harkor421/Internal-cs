@@ -35,6 +35,7 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.button12 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,7 +48,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.firstCustomControl2 = new MicroHub.FirstCustomControl();
             this.user1 = new MicroHub.User();
-            this.button7 = new System.Windows.Forms.Button();
+            this.user_Analytics1 = new MicroHub.User_Analytics();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -124,6 +125,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(190, 584);
             this.panel3.TabIndex = 18;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Red;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 505);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(186, 66);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "Close ";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button4
             // 
@@ -292,23 +311,13 @@
             this.user1.Size = new System.Drawing.Size(840, 585);
             this.user1.TabIndex = 20;
             // 
-            // button7
+            // user_Analytics1
             // 
-            this.button7.BackColor = System.Drawing.Color.Red;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 505);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(186, 66);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "Close ";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.user_Analytics1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.user_Analytics1.Location = new System.Drawing.Point(188, 0);
+            this.user_Analytics1.Name = "user_Analytics1";
+            this.user_Analytics1.Size = new System.Drawing.Size(840, 585);
+            this.user_Analytics1.TabIndex = 21;
             // 
             // Form1
             // 
@@ -317,6 +326,7 @@
             this.ClientSize = new System.Drawing.Size(1026, 583);
             this.Controls.Add(this.firstCustomControl2);
             this.Controls.Add(this.user1);
+            this.Controls.Add(this.user_Analytics1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -353,6 +363,7 @@
         private FirstCustomControl firstCustomControl2;
         private User user1;
         private System.Windows.Forms.Button button7;
+        private User_Analytics user_Analytics1;
     }
 }
 
