@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MicroHub
 {
-    public class Temperature
+    public class Dates
     {
-        public string Location { get; set; }
+        public string years { get; set; }
         public decimal M1 { get; set; }
         public decimal M2 { get; set; }
         public decimal M3 { get; set; }
@@ -21,6 +21,8 @@ namespace MicroHub
         public decimal M10 { get; set; }
         public decimal M11 { get; set; }
         public decimal M12 { get; set; }
+
+
         public object this[string propertyName]
         {
             get { return this.GetType().GetProperty(propertyName).GetValue(this, null); }
