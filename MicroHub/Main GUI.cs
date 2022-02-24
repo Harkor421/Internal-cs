@@ -47,7 +47,7 @@ namespace MicroHub
 
         private void button3_Click(object sender, EventArgs e)
         {
-        
+            estimated_Income1.BringToFront();
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -68,6 +68,8 @@ namespace MicroHub
 
         private void button5_Click(object sender, EventArgs e)
         {       
+
+
 
         }
 

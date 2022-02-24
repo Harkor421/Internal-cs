@@ -215,6 +215,12 @@
     <Compile Include="circleprogressbar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Estimated Income.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Estimated Income.Designer.cs">
+      <DependentUpon>Estimated Income.cs</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="Form4.cs">
       <SubType>Form</SubType>
@@ -273,6 +279,9 @@
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Estimated Income.resx">
+      <DependentUpon>Estimated Income.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>

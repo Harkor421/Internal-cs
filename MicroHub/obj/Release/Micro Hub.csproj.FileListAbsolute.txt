@@ -619,3 +619,4 @@ C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\Micro
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.User_Analytics.resources
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.AssemblyReference.cache
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.User_Analytics.resources
+C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Estimated_Income.resources

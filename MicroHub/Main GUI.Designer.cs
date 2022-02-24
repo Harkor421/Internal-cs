@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
+            this.estimated_Income1 = new MicroHub.Estimated_Income();
             this.firstCustomControl2 = new MicroHub.FirstCustomControl();
             this.user1 = new MicroHub.User();
             this.user_Analytics1 = new MicroHub.User_Analytics();
@@ -294,6 +295,14 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
+            // estimated_Income1
+            // 
+            this.estimated_Income1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.estimated_Income1.Location = new System.Drawing.Point(188, 0);
+            this.estimated_Income1.Name = "estimated_Income1";
+            this.estimated_Income1.Size = new System.Drawing.Size(840, 585);
+            this.estimated_Income1.TabIndex = 22;
+            // 
             // firstCustomControl2
             // 
             this.firstCustomControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
@@ -326,6 +335,7 @@
             this.ClientSize = new System.Drawing.Size(1026, 583);
             this.Controls.Add(this.firstCustomControl2);
             this.Controls.Add(this.user1);
+            this.Controls.Add(this.estimated_Income1);
             this.Controls.Add(this.user_Analytics1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -364,6 +374,7 @@
         private User user1;
         private System.Windows.Forms.Button button7;
         private User_Analytics user_Analytics1;
+        private Estimated_Income estimated_Income1;
     }
 }
 
