@@ -428,7 +428,6 @@ C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\Micro
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\System.Security.AccessControl.xml
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\System.Security.Principal.Windows.xml
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\bin\Release\System.ValueTuple.xml
-C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.AssemblyReference.cache
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\Interop.Shell32.dll
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.ResolveComReference.cache
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.Form4.resources
@@ -620,3 +619,6 @@ C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.AssemblyReference.cache
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.User_Analytics.resources
 C:\Users\sekes\OneDrive\Escritorio\Internal-cs\Internal-cs\MicroHub\obj\Release\MicroHub.Estimated_Income.resources
+C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.Estimated_Income.resources
+C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.Comments.resources
+C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.AssemblyReference.cache

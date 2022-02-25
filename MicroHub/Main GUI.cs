@@ -37,16 +37,19 @@ namespace MicroHub
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            panel1.Top = button1.Top;
             firstCustomControl2.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            panel1.Top = button2.Top;
             user_Analytics1.BringToFront();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            panel1.Top = button3.Top;
             estimated_Income1.BringToFront();
         }
 
@@ -57,6 +60,7 @@ namespace MicroHub
 
         private void button4_Click(object sender, EventArgs e)
         {
+            panel1.Top = button4.Top;
             user1.BringToFront();
         
         }
@@ -67,9 +71,7 @@ namespace MicroHub
         }
 
         private void button5_Click(object sender, EventArgs e)
-        {       
-
-
+        {
 
         }
 
@@ -220,6 +222,12 @@ namespace MicroHub
         private void button7_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            panel1.Top = button5.Top;
+            comments1.BringToFront();
         }
 
         private void mySecondCustmControl1_MouseUp(object sender, MouseEventArgs e)
