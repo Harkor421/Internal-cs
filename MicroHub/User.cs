@@ -79,8 +79,8 @@ namespace MicroHub
         private void button4_Click(object sender, EventArgs e)
         {
             String search = textBox1.Text;
-            dataGridView1.EndEdit(); 
-            ds.Update(dataTable); //Updates the information in the Database
+            dataGridView1.EndEdit(); //Stops receiving client edits in datagrid.
+            ds.Update(dataTable); //Updates the information in the Database.
             MessageBox.Show("Changes have been saved");
             loaddb(search);
         }

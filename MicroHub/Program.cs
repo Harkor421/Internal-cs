@@ -18,7 +18,6 @@ namespace MicroHub
         static void Main()
         {
 
-            Application.SetCompatibleTextRenderingDefault(false);
 
             try
             {
@@ -27,13 +26,13 @@ namespace MicroHub
 
 
 
-                Console.WriteLine("Conectado a Access");
+                Console.WriteLine("Conected to Database");
 
                 string user = Properties.Settings.Default.username;
                 string pass = Properties.Settings.Default.password;
     
         
-                Console.WriteLine("EJECUTANDO DATOS DE INICIO DE SESIÓN");
+                Console.WriteLine("EXECUTING LOG IN DATA");
                 Application.Run(new Login_and_Register());
 
             }
@@ -43,6 +42,7 @@ namespace MicroHub
             }
 
         }
-        
+
+
     }
 }

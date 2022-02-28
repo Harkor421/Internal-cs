@@ -18,7 +18,12 @@ namespace MicroHub
         {
             InitializeComponent();
             firstCustomControl2.BringToFront();
+            
         }
+
+
+
+
 
         //No Flicker
         protected override CreateParams CreateParams
@@ -44,7 +49,7 @@ namespace MicroHub
         private void button2_Click(object sender, EventArgs e)
         {
             panel1.Top = button2.Top;
-            user_Analytics1.BringToFront();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -226,7 +231,7 @@ namespace MicroHub
 
         private void button8_Click(object sender, EventArgs e)
         {
-            panel1.Top = button5.Top;
+            panel1.Top = button8.Top;
             comments1.BringToFront();
         }
 

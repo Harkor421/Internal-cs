@@ -120,7 +120,7 @@ namespace MicroHub
                     Properties.Settings.Default.username = textBox1.Text;
                     Properties.Settings.Default.password = textBox2.Text;
                     Properties.Settings.Default.Save();
-                    Console.WriteLine("datos guardados");
+                    Console.WriteLine("Data Saved");
                 }
             //  Else the config file will be deleted. 
               
@@ -129,7 +129,7 @@ namespace MicroHub
                     Properties.Settings.Default.username = "";
                     Properties.Settings.Default.password = "";
                     Properties.Settings.Default.Save();
-                    Console.WriteLine("datos eliminados");
+                    Console.WriteLine("Data deleted");
                 }
 
 
@@ -138,30 +138,30 @@ namespace MicroHub
                 {
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
                 con.Open();
-                OleDbCommand cmd = new OleDbCommand ("select user_pass from Users where user_email = '" + textBox1.Text + "'", con); //Query to find the user_password by email.
+                OleDbCommand cmd = new OleDbCommand ("select user_pass from Users where user_email = '" + textBox1.Text + "'", con); //Query to find the user's password by email.
                 Console.Write("encontrando contra");
                 String expected = cmd.ExecuteScalar().ToString();
                 Console.Write("Expected HASH " + expected); // Finds expected hashed password in the database corresponding to that user.
                 Console.WriteLine("Hash encontrado");
 
 
-                String enpass = Global.MD5Encode(textBox2.Text, expected); // Hashes the current password typed.
+                String enpass = Global.MD5Encode(textBox2.Text, expected); // Hashes the current password typed and compares it.
                 Console.WriteLine(enpass);
-                Console.WriteLine("Contra descifrada");
+                Console.WriteLine("The password typed matches the password in the database");
 
 
 
 
                     cmd = new OleDbCommand("select * from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Logs in with the encrypted typed password and email.
                     OleDbDataReader dr = cmd.ExecuteReader();
-                    if (dr.Read() == true)
+                    if (dr.Read() == true) // Checks if a row with that query exists
                     {
                         
-                        Global.username = textBox1.Text;
-                        Global.password = textBox2.Text;
+                        Global.username = textBox1.Text; // The email is stored in a global variable. 
+                        Global.password = textBox2.Text; //The password is stored in a global variable.
                         OleDbCommand cm = new OleDbCommand("select user_name from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Gets name of the user.
-                        Global.name = cm.ExecuteScalar().ToString();
-                        Console.WriteLine(Global.name);
+                        Global.name = cm.ExecuteScalar().ToString(); //The name of the user gets stored in a global variable.
+                        Console.WriteLine(Global.name); 
                         Form2 form = new Form2();
                         form.Show();
                         this.Hide();

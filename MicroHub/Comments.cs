@@ -13,10 +13,17 @@ namespace MicroHub
 {
     public partial class Comments : UserControl
     {
+        DataObject collection = new DataObject();
         public Comments()
         {
             InitializeComponent();
+            /*/
+            dataGridView1.Columns[0].HeaderText = "Comment #"; //Setting the names for the columns in the DataGrid
+            dataGridView1.Columns[1].HeaderText = "Comment";
+            dataGridView1.Columns[2].HeaderText = "Member Rank";
+            DataTable dataTable = new DataTable();
             getcomments();
+            /**/
         }
 
         private void getcomments()
@@ -26,18 +33,18 @@ namespace MicroHub
             {
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
                 con.Open();
-              
 
 
 
-                OleDbCommand cmd = new OleDbCommand("select * from Users", con); //Logs in with the encrypted typed password and email.
-                OleDbDataReader dr = cmd.ExecuteReader();
+                int i = 0;
+                OleDbCommand cmd = new OleDbCommand("select feedback_ID, comment, sub_ID from User_F", con); 
+                OleDbDataReader dr = cmd.ExecuteReader();              
+                
+         
                 while (dr.Read())
                 {
-                    ListViewItem lvItem = new ListViewItem();
-                    lvItem.SubItems[0].Text = dr[0].ToString();
-                    lvItem.SubItems.Add(dr[0].ToString());
-                    listView1.Items.Add(lvItem);
+             
+
                 }
                 dr.Close();
 
@@ -47,6 +54,11 @@ namespace MicroHub
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
