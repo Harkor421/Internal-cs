@@ -112,7 +112,8 @@ namespace MicroHub
 
         private void button_WOC1_Click(object sender, EventArgs e)
         {
-          
+          if(textBox1.Text != "" || textBox2.Text != "")
+            {
             // If the checkbox remind me is checked, the username and password typed, will be stored on a local config file 
 
                 if (checkBox1.Checked == true)
@@ -154,9 +155,12 @@ namespace MicroHub
 
                     cmd = new OleDbCommand("select * from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Logs in with the encrypted typed password and email.
                     OleDbDataReader dr = cmd.ExecuteReader();
+                    cmd = new OleDbCommand("select user_privileges from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Query to find the user's password by email.
+                    String privilege = cmd.ExecuteScalar().ToString();
                     if (dr.Read() == true) // Checks if a row with that query exists
                     {
-                        
+                        if(privilege == "1")
+                        {
                         Global.username = textBox1.Text; // The email is stored in a global variable. 
                         Global.password = textBox2.Text; //The password is stored in a global variable.
                         OleDbCommand cm = new OleDbCommand("select user_name from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Gets name of the user.
@@ -165,7 +169,11 @@ namespace MicroHub
                         Form2 form = new Form2();
                         form.Show();
                         this.Hide();
-
+                        }
+                         else
+                        {
+                        Console.WriteLine("The account doesn't have enough privileges");
+                        }
                     }
                     else
                     {
@@ -181,9 +189,11 @@ namespace MicroHub
                 {
 
                 }
-            
 
             }
+            label8.Text = "One of the fields is empty";
+
+        }
     }
 
 }
