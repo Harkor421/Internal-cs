@@ -171,7 +171,7 @@ namespace MicroHub
                         }
                          else
                         {
-                        Console.WriteLine("The account doesn't have enough privileges");
+                        label8.Text = ("The account doesn't have enough privileges");
                         }
                     }
                     else
