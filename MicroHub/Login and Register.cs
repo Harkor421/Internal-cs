@@ -140,7 +140,6 @@ namespace MicroHub
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
                 con.Open();
                 OleDbCommand cmd = new OleDbCommand ("select user_pass from Users where user_email = '" + textBox1.Text + "'", con); //Query to find the user's password by email.
-                Console.Write("encontrando contra");
                 String expected = cmd.ExecuteScalar().ToString();
                 Console.Write("Expected HASH " + expected); // Finds expected hashed password in the database corresponding to that user.
                 Console.WriteLine("Hash encontrado");
@@ -183,7 +182,7 @@ namespace MicroHub
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.ToString());
+                    label8.Text = "Invalid Credentials, Please Re-Enter";
                 }
                 finally
                 {
@@ -191,7 +190,10 @@ namespace MicroHub
                 }
 
             }
-            label8.Text = "One of the fields is empty";
+            else
+            {
+                label8.Text = "One of the fields is empty";
+            }
 
         }
     }
