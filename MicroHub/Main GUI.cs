@@ -48,6 +48,7 @@ namespace MicroHub
 
         private void button2_Click(object sender, EventArgs e)
         {
+            user_Analytics1.BringToFront();
             panel1.Top = button2.Top;
 
         }

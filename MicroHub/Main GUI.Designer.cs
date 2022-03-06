@@ -48,10 +48,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.comments1 = new MicroHub.Comments();
             this.firstCustomControl2 = new MicroHub.FirstCustomControl();
             this.user1 = new MicroHub.User();
             this.estimated_Income1 = new MicroHub.Estimated_Income();
+            this.comments1 = new MicroHub.Comments();
             this.user_Analytics1 = new MicroHub.User_Analytics();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,7 +102,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(179, 61);
             this.button8.TabIndex = 17;
-            this.button8.Text = "Estimated Income";
+            this.button8.Text = "User Feedback";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -195,7 +195,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(184, 53);
             this.button5.TabIndex = 9;
-            this.button5.Text = "    Desbloquear Red";
+            this.button5.Text = "   Application Analytics";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -326,19 +326,11 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // comments1
-            // 
-            this.comments1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comments1.Location = new System.Drawing.Point(188, -1);
-            this.comments1.Name = "comments1";
-            this.comments1.Size = new System.Drawing.Size(840, 579);
-            this.comments1.TabIndex = 23;
-            // 
             // firstCustomControl2
             // 
             this.firstCustomControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.firstCustomControl2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("firstCustomControl2.BackgroundImage")));
-            this.firstCustomControl2.Location = new System.Drawing.Point(196, 12);
+            this.firstCustomControl2.Location = new System.Drawing.Point(189, -4);
             this.firstCustomControl2.Name = "firstCustomControl2";
             this.firstCustomControl2.Size = new System.Drawing.Size(840, 585);
             this.firstCustomControl2.TabIndex = 19;
@@ -358,6 +350,14 @@
             this.estimated_Income1.Name = "estimated_Income1";
             this.estimated_Income1.Size = new System.Drawing.Size(840, 585);
             this.estimated_Income1.TabIndex = 22;
+            // 
+            // comments1
+            // 
+            this.comments1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comments1.Location = new System.Drawing.Point(188, -1);
+            this.comments1.Name = "comments1";
+            this.comments1.Size = new System.Drawing.Size(840, 579);
+            this.comments1.TabIndex = 23;
             // 
             // user_Analytics1
             // 

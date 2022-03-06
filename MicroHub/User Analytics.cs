@@ -26,7 +26,7 @@ namespace MicroHub
         {
             InitializeComponent();
             dataGridView1.DataSource = new List<Dates>();
-            loaddb();
+ 
         }
 
 
@@ -62,31 +62,17 @@ namespace MicroHub
 
             try
             {
-                var objChart = chart1.ChartAreas[0];
-                objChart.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-                //month 1-12
-                objChart.AxisX.Minimum = 1;
-                objChart.AxisX.Maximum = 12;
-                //temperature
-                objChart.AxisY.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-                objChart.AxisY.Minimum = 0;
-                objChart.AxisY.Maximum = 1000;
-                //clear
-                chart1.Series.Clear();
-                //random color
-                Random random = new Random();
-                //loop rows to draw multi line chart c#
-                foreach (Dates t in dataGridView1.DataSource as List<Dates>)
+                foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    chart1.Series.Add(t.years);
-                    chart1.Series[t.years].Color = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
-                    chart1.Series[t.years].Legend = "Legend1";
-                    chart1.Series[t.years].ChartArea = "ChartArea1";
-                    chart1.Series[t.years].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-                    //adding data
-                    for (int i = 1; i <= 12; i++)
-                        chart1.Series[t.years].Points.AddXY(i, Convert.ToInt32(t[$"M{i}"]));
+
+                    //chartBpComplaince.Series.Clear();
+                    Series S = chart1.Series.Add(row.Cells[2].Value.ToString());
+
+                    S.Points.AddXY(row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString());
+                    S.ChartType = SeriesChartType.Column;
+                    S.IsValueShownAsLabel = true;
                 }
+
             }
             catch (Exception ex)
             {

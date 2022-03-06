@@ -13,17 +13,13 @@ namespace MicroHub
 {
     public partial class Comments : UserControl
     {
-        DataObject collection = new DataObject();
+        OleDbDataAdapter ds;
+        private BindingSource bindingSource = null;
+        private OleDbCommandBuilder oleCommandBuilder = null;
+        DataTable dataTable = new DataTable();
         public Comments()
         {
             InitializeComponent();
-            /*/
-            dataGridView1.Columns[0].HeaderText = "Comment #"; //Setting the names for the columns in the DataGrid
-            dataGridView1.Columns[1].HeaderText = "Comment";
-            dataGridView1.Columns[2].HeaderText = "Member Rank";
-            DataTable dataTable = new DataTable();
-            getcomments();
-            /**/
         }
 
         private void getcomments()
@@ -31,23 +27,26 @@ namespace MicroHub
 
             try //Try to see if there's connection with database, and catch any errors such as not typing in the textfields. 
             {
+
+
+
+                dataGridView1.DataSource = null;
+                dataTable.Clear();
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
                 con.Open();
 
-
-
-                int i = 0;
-                OleDbCommand cmd = new OleDbCommand("select feedback_ID, comment, sub_ID from User_F", con); 
-                OleDbDataReader dr = cmd.ExecuteReader();              
-                
-         
-                while (dr.Read())
-                {
-             
-
-                }
-                dr.Close();
-
+                ds = new OleDbDataAdapter("SELECT User_F.feedback_ID, User_F.comment, Subscriptions.subscription_status From User_F, Subscriptions WHERE User_F.sub_ID = Subscriptions.sub_ID", con);
+                oleCommandBuilder = new OleDbCommandBuilder(ds);
+                ds.Fill(dataTable);
+                bindingSource = new BindingSource { DataSource = dataTable };// Binds any changes done in the datagrid with the database
+                dataGridView1.DataSource = bindingSource;
+                con.Close();
+                dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[0].Width = 100;
+                dataGridView1.Columns[1].Width = 330;
+                dataGridView1.Columns[0].HeaderText = "Comment #"; //Setting the names for the columns in the DataGrid
+                dataGridView1.Columns[1].HeaderText = "Comment";
+                dataGridView1.Columns[2].HeaderText = "Subscription Status";
 
             }
             catch (Exception ex)
@@ -58,7 +57,7 @@ namespace MicroHub
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            getcomments();
         }
     }
 }

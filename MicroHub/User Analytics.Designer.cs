@@ -41,18 +41,18 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(20, 38);
+            this.panel1.Location = new System.Drawing.Point(407, 361);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(331, 114);
+            this.panel1.Size = new System.Drawing.Size(398, 114);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 338);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(785, 181);
+            this.dataGridView1.Size = new System.Drawing.Size(227, 384);
             this.dataGridView1.TabIndex = 1;
             // 
             // button4
@@ -64,7 +64,7 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(20, 225);
+            this.button4.Location = new System.Drawing.Point(92, 432);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 43);
             this.button4.TabIndex = 10;

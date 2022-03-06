@@ -64,7 +64,7 @@ namespace MicroHub
                 dataGridView1.Columns[1].HeaderText = "Name";
                 dataGridView1.Columns[2].HeaderText = "Password";
                 dataGridView1.Columns[3].HeaderText = "Email";
-                dataGridView1.Columns[3].HeaderText = "Username";
+                dataGridView1.Columns[4].HeaderText = "Username";
 
             }
             catch (Exception ex)

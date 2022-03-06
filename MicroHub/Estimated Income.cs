@@ -25,10 +25,16 @@ namespace MicroHub
             {
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");//databaseconnection
                 con.Open();
-                //Query to count the amount of users who have the application downloaded. 
-                OleDbCommand cmd = new OleDbCommand("SELECT COUNT (download_status) FROM Downloads WHERE download_status = 1", con);
-                String userdown = cmd.ExecuteScalar().ToString();
-
+                //Query to count the amount of users who have premium accounts.
+                OleDbCommand cmd = new OleDbCommand("SELECT COUNT (subscription_status) FROM Subscriptions WHERE subscription_status = YES", con);
+                String prem = cmd.ExecuteScalar().ToString();
+                label5.Text = prem;
+                double monthly = double.Parse(prem) * 9.99;
+                label6.Text = "" + monthly + " dollars";
+                cmd = new OleDbCommand("SELECT SUM (subscription_count) FROM Subscriptions", con);
+                String inc = cmd.ExecuteScalar().ToString(); 
+                double income = double.Parse(inc) * 9.99;
+                label7.Text = "" + income + " dollars";
 
                 //Loads database.
                 String f = "";
@@ -59,6 +65,9 @@ namespace MicroHub
                 dataGridView1.DataSource = bindingSource;
                 con.Close();
                 dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[0].Width = 100;
+                dataGridView1.Columns[1].Width = 200;
+                dataGridView1.Columns[2].Width = 200;
                 dataGridView1.Columns[0].HeaderText = "ID"; //Setting the names for the columns in the DataGrid
                 dataGridView1.Columns[1].HeaderText = "Subscription Status";
                 dataGridView1.Columns[2].HeaderText = "Subscription Count";
