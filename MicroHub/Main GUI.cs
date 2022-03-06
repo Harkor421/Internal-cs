@@ -71,14 +71,12 @@ namespace MicroHub
         
         }
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.instagram.com/microhubco/");
-        }
+    
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            panel1.Top = button5.Top;
+            appAnalytics1.BringToFront();
         }
 
 

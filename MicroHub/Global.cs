@@ -13,7 +13,7 @@ namespace MicroHub
         public static string username;
         public static string password;
         public static string name;
-
+        public static string monthlyincome;
         public static string CreateMD5(string input)
         {
             // Use input string to calculate MD5 hash

@@ -81,7 +81,7 @@ namespace MicroHub
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-        
+
             Form2 form = new Form2();
             form.Show();
             this.Hide();
@@ -90,6 +90,87 @@ namespace MicroHub
         private void label4_Click_1(object sender, EventArgs e)
         {
             Process.Start("http://www.microhubco.com/mi-cuenta/");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" || textBox2.Text != "")
+            {
+                // If the checkbox remind me is checked, the username and password typed, will be stored on a local config file 
+
+                if (checkBox1.Checked == true)
+                {
+                    Properties.Settings.Default.username = textBox1.Text;
+                    Properties.Settings.Default.password = textBox2.Text;
+                    Properties.Settings.Default.Save();
+                    Console.WriteLine("Data Saved");
+                }
+                //  Else the config file will be deleted. 
+
+                if (checkBox1.Checked == false)
+                {
+                    Properties.Settings.Default.username = "";
+                    Properties.Settings.Default.password = "";
+                    Properties.Settings.Default.Save();
+                    Console.WriteLine("Data deleted");
+                }
+
+
+
+                try //Try to see if there's connection with database, and catch any errors such as not typing in the textfields. 
+                {
+                    OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
+                    con.Open();
+                    OleDbCommand cmd = new OleDbCommand("select user_pass from Users where user_email = '" + textBox1.Text + "'", con); //Query to find the user's password by email.
+                    String expected = cmd.ExecuteScalar().ToString();
+                    Console.Write("Expected HASH " + expected); // Finds expected hashed password in the database corresponding to that user.
+                    Console.WriteLine("Hash encontrado");
+
+
+                    String enpass = Global.MD5Encode(textBox2.Text, expected); // Hashes the current password typed and compares it.
+                    Console.WriteLine(enpass);
+                    Console.WriteLine("The password typed matches the password in the database");
+
+
+
+
+                    cmd = new OleDbCommand("select * from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Logs in with the encrypted typed password and email.
+                    OleDbDataReader dr = cmd.ExecuteReader();
+                    cmd = new OleDbCommand("select user_privileges from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Query to find the user's password by email.
+                    String privilege = cmd.ExecuteScalar().ToString();
+                    if (dr.Read() == true) // Checks if a row with that query exists
+                    {
+                        if (privilege == "1")
+                        {
+                            Global.username = textBox1.Text; // The email is stored in a global variable. 
+                            Global.password = textBox2.Text; //The password is stored in a global variable.
+                            OleDbCommand cm = new OleDbCommand("select user_name from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Gets name of the user.
+                            Global.name = cm.ExecuteScalar().ToString(); //The name of the user gets stored in a global variable.
+                            Console.WriteLine(Global.name);
+                            Form2 form = new Form2();
+                            form.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            label8.Text = ("The account doesn't have enough privileges");
+                        }
+                    }
+                    else
+                    {
+                        label8.Text = "Invalid Credentials, Please Re-Enter";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    label8.Text = "Invalid Credentials, Please Re-Enter";
+                }
+            }
+            else
+            {
+                label8.Text = "One of the fields is empty";
+            }
+
         }
 
         private void Login_and_Register_Load(object sender, EventArgs e)
@@ -109,93 +190,5 @@ namespace MicroHub
                 checkBox1.CheckState = CheckState.Unchecked;
             }
         }
-
-        private void button_WOC1_Click(object sender, EventArgs e)
-        {
-          if(textBox1.Text != "" || textBox2.Text != "")
-            {
-            // If the checkbox remind me is checked, the username and password typed, will be stored on a local config file 
-
-                if (checkBox1.Checked == true)
-                {
-                    Properties.Settings.Default.username = textBox1.Text;
-                    Properties.Settings.Default.password = textBox2.Text;
-                    Properties.Settings.Default.Save();
-                    Console.WriteLine("Data Saved");
-                }
-            //  Else the config file will be deleted. 
-              
-                if (checkBox1.Checked == false)
-                {
-                    Properties.Settings.Default.username = "";
-                    Properties.Settings.Default.password = "";
-                    Properties.Settings.Default.Save();
-                    Console.WriteLine("Data deleted");
-                }
-
-
-
-                try //Try to see if there's connection with database, and catch any errors such as not typing in the textfields. 
-                {
-                OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand ("select user_pass from Users where user_email = '" + textBox1.Text + "'", con); //Query to find the user's password by email.
-                String expected = cmd.ExecuteScalar().ToString();
-                Console.Write("Expected HASH " + expected); // Finds expected hashed password in the database corresponding to that user.
-                Console.WriteLine("Hash encontrado");
-
-
-                String enpass = Global.MD5Encode(textBox2.Text, expected); // Hashes the current password typed and compares it.
-                Console.WriteLine(enpass);
-                Console.WriteLine("The password typed matches the password in the database");
-
-
-
-
-                    cmd = new OleDbCommand("select * from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Logs in with the encrypted typed password and email.
-                    OleDbDataReader dr = cmd.ExecuteReader();
-                    cmd = new OleDbCommand("select user_privileges from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Query to find the user's password by email.
-                    String privilege = cmd.ExecuteScalar().ToString();
-                    if (dr.Read() == true) // Checks if a row with that query exists
-                    {
-                        if(privilege == "1")
-                        {
-                        Global.username = textBox1.Text; // The email is stored in a global variable. 
-                        Global.password = textBox2.Text; //The password is stored in a global variable.
-                        OleDbCommand cm = new OleDbCommand("select user_name from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Gets name of the user.
-                        Global.name = cm.ExecuteScalar().ToString(); //The name of the user gets stored in a global variable.
-                        Console.WriteLine(Global.name); 
-                        Form2 form = new Form2();
-                        form.Show();
-                        this.Hide();
-                        }
-                         else
-                        {
-                        label8.Text = ("The account doesn't have enough privileges");
-                        }
-                    }
-                    else
-                    {
-                    label8.Text = "Invalid Credentials, Please Re-Enter";
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    label8.Text = "Invalid Credentials, Please Re-Enter";
-                }
-                finally
-                {
-
-                }
-
-            }
-            else
-            {
-                label8.Text = "One of the fields is empty";
-            }
-
-        }
     }
-
 }

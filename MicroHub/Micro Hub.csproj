@@ -209,10 +209,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Button.cs">
-      <SubType>Component</SubType>
+    <Compile Include="AppAnalytics.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="circleprogressbar.cs">
+    <Compile Include="AppAnalytics.Designer.cs">
+      <DependentUpon>AppAnalytics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Button.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Comments.cs">
@@ -234,20 +237,13 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Graph.cs" />
     <Compile Include="Login and Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login and Register.Designer.cs">
       <DependentUpon>Login and Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="OvalButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ProgressBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Round Graph.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Main Page.cs">
@@ -270,9 +266,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Toggle.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="User Analytics.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -285,6 +278,9 @@
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AppAnalytics.resx">
+      <DependentUpon>AppAnalytics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Comments.resx">
       <DependentUpon>Comments.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,9 +298,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main GUI.resx">
       <DependentUpon>Main GUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OvalButton.resx">
-      <DependentUpon>OvalButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla de Carga.resx">
       <DependentUpon>Pantalla de Carga.cs</DependentUpon>
@@ -327,7 +320,6 @@
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
-    <None Include="Micro Opt_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BottleNeck_Calculator.datasource" />
     <None Include="Properties\DataSources\BottonCircular.datasource" />

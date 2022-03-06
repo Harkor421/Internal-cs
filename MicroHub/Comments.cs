@@ -20,6 +20,7 @@ namespace MicroHub
         public Comments()
         {
             InitializeComponent();
+            getcomments();
         }
 
         private void getcomments()

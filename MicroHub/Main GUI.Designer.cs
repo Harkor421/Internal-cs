@@ -32,10 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -47,12 +46,12 @@
             this.button13 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
             this.firstCustomControl2 = new MicroHub.FirstCustomControl();
             this.user1 = new MicroHub.User();
             this.estimated_Income1 = new MicroHub.Estimated_Income();
             this.comments1 = new MicroHub.Comments();
             this.user_Analytics1 = new MicroHub.User_Analytics();
+            this.appAnalytics1 = new MicroHub.AppAnalytics();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -68,10 +67,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.button12);
+            this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.button5);
@@ -83,29 +81,10 @@
             this.panel3.Controls.Add(this.button13);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.button10);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(190, 584);
             this.panel3.TabIndex = 18;
-            // 
-            // button8
-            // 
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(3, 406);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(179, 61);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "User Feedback";
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panel1
             // 
@@ -133,20 +112,23 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button12
+            // button8
             // 
-            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(0, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(30, 28);
-            this.button12.TabIndex = 4;
-            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button12.UseVisualStyleBackColor = true;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(3, 406);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(179, 61);
+            this.button8.TabIndex = 17;
+            this.button8.Text = "User Feedback";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button1
             // 
@@ -202,7 +184,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(64, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(55, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(78, 90);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -310,27 +292,11 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "++";
             // 
-            // button10
-            // 
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(64, 38);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(36, 34);
-            this.button10.TabIndex = 4;
-            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
             // firstCustomControl2
             // 
             this.firstCustomControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.firstCustomControl2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("firstCustomControl2.BackgroundImage")));
-            this.firstCustomControl2.Location = new System.Drawing.Point(189, -4);
+            this.firstCustomControl2.Location = new System.Drawing.Point(187, -1);
             this.firstCustomControl2.Name = "firstCustomControl2";
             this.firstCustomControl2.Size = new System.Drawing.Size(840, 585);
             this.firstCustomControl2.TabIndex = 19;
@@ -367,6 +333,14 @@
             this.user_Analytics1.Size = new System.Drawing.Size(840, 585);
             this.user_Analytics1.TabIndex = 21;
             // 
+            // appAnalytics1
+            // 
+            this.appAnalytics1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.appAnalytics1.Location = new System.Drawing.Point(188, -1);
+            this.appAnalytics1.Name = "appAnalytics1";
+            this.appAnalytics1.Size = new System.Drawing.Size(840, 586);
+            this.appAnalytics1.TabIndex = 24;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,6 +351,7 @@
             this.Controls.Add(this.estimated_Income1);
             this.Controls.Add(this.comments1);
             this.Controls.Add(this.user_Analytics1);
+            this.Controls.Add(this.appAnalytics1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -395,7 +370,6 @@
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Panel panel3;
@@ -408,7 +382,6 @@
         private System.Windows.Forms.Button button6;
         private FirstCustomControl firstCustomControl1;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label2;
         private FirstCustomControl firstCustomControl2;
         private User user1;
@@ -418,6 +391,7 @@
         private System.Windows.Forms.Panel panel1;
         private Comments comments1;
         private User_Analytics user_Analytics1;
+        private AppAnalytics appAnalytics1;
     }
 }
 

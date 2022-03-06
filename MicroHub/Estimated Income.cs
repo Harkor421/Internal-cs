@@ -35,7 +35,6 @@ namespace MicroHub
                 String inc = cmd.ExecuteScalar().ToString(); 
                 double income = double.Parse(inc) * 9.99;
                 label7.Text = "" + income + " dollars";
-
                 //Loads database.
                 String f = "";
                 loaddb(f);

@@ -33,7 +33,6 @@ namespace MicroHub
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_and_Register));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_WOC1 = new ePOSOne.btnProduct.Button_WOC();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -43,6 +42,7 @@ namespace MicroHub
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +63,7 @@ namespace MicroHub
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.button_WOC1);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.textBox2);
@@ -78,32 +78,6 @@ namespace MicroHub
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_and_Register_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_and_Register_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Login_and_Register_MouseUp);
-            // 
-            // button_WOC1
-            // 
-            this.button_WOC1.BackColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button_WOC1.BorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.ButtonColor = System.Drawing.Color.White;
-            this.button_WOC1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_WOC1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button_WOC1.FlatAppearance.BorderSize = 0;
-            this.button_WOC1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_WOC1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_WOC1.ForeColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.Location = new System.Drawing.Point(104, 248);
-            this.button_WOC1.Name = "button_WOC1";
-            this.button_WOC1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.button_WOC1.OnHoverButtonColor = System.Drawing.Color.DarkGray;
-            this.button_WOC1.OnHoverTextColor = System.Drawing.Color.Black;
-            this.button_WOC1.Size = new System.Drawing.Size(175, 45);
-            this.button_WOC1.TabIndex = 59;
-            this.button_WOC1.Text = "Iniciar Sesión";
-            this.button_WOC1.TextColor = System.Drawing.Color.Black;
-            this.button_WOC1.UseVisualStyleBackColor = false;
-            this.button_WOC1.Click += new System.EventHandler(this.button_WOC1_Click);
             // 
             // checkBox1
             // 
@@ -195,6 +169,23 @@ namespace MicroHub
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(100, 265);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(156, 34);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Log In";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Login_and_Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,9 +223,10 @@ namespace MicroHub
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkBox1;
-        private ePOSOne.btnProduct.Button_WOC button_WOC1;
+
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button4;
     }
 }

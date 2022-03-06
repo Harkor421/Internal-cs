@@ -25,8 +25,8 @@ namespace MicroHub
         public User_Analytics()
         {
             InitializeComponent();
-            dataGridView1.DataSource = new List<Dates>();
- 
+            loaddb();
+
         }
 
 
@@ -46,6 +46,8 @@ namespace MicroHub
                 con.Close();
                 dataGridView1.RowHeadersVisible = false;
                 dataGridView1.DataSource = bindingSource;
+                dataGridView1.Columns[0].HeaderText = "Months";
+                dataGridView1.Columns[1].HeaderText = "User Gain";
             }
             catch (Exception ex)
             {
@@ -58,26 +60,31 @@ namespace MicroHub
 
         private void button4_Click(object sender, EventArgs e)
         {
-         
-
             try
             {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
+                
+                var users = chart1.Series.Add("Year 1");
+                users.ChartType = SeriesChartType.Line;
+                chart1.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+                chart1.ChartAreas[0].AxisY.MinorGrid.Enabled = false;
+                chart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                chart1.ChartAreas[0].AxisX.MinorGrid.Enabled = false;
+
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
-
-                    //chartBpComplaince.Series.Clear();
-                    Series S = chart1.Series.Add(row.Cells[2].Value.ToString());
-
-                    S.Points.AddXY(row.Cells[4].Value.ToString(), row.Cells[3].Value.ToString());
-                    S.ChartType = SeriesChartType.Column;
-                    S.IsValueShownAsLabel = true;
+                    double tempx = double.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                    double tempy = double.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString());
+                    users.Points.AddXY(tempx,tempy);
                 }
 
             }
+
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
         }
+
+
     }
 }

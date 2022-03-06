@@ -19,6 +19,16 @@ namespace MicroHub
             con.Open();
             OleDbCommand cm = new OleDbCommand("select count (user_ID) from Users", con);
             label3.Text = cm.ExecuteScalar().ToString();
+
+            cm = new OleDbCommand("SELECT COUNT (subscription_status) FROM Subscriptions WHERE subscription_status = YES", con);
+            String prem = cm.ExecuteScalar().ToString();
+            label4.Text = prem;
+            double monthly = double.Parse(prem) * 9.99;
+            label6.Text = "" + monthly + " dollars";
+
+
+
+
             }
             catch
             {
