@@ -26,15 +26,26 @@ namespace MicroHub
         {
             InitializeComponent();
             loaddb();
-
+            loadchart();
+            
+            OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");//databaseconnection
+            con.Open();
+            OleDbCommand cmd = new OleDbCommand("SELECT COUNT (user_ID) FROM Users", con);
+            String users = cmd.ExecuteScalar().ToString();
+            cmd = new OleDbCommand("SELECT COUNT (download_status) FROM Downloads WHERE download_status = 1;", con);
+            String userdown = cmd.ExecuteScalar().ToString();
+            cmd = new OleDbCommand("SELECT COUNT (download_status) FROM Downloads", con);
+            String downloads = cmd.ExecuteScalar().ToString();
+            label5.Text = userdown;
+            label4.Text = users;
+            label6.Text = downloads;
         }
 
 
         private void loaddb()
         {
             dataGridView1.DataSource = null;
-            dataTable.Clear(); //Clears the datatable for refreshing any changes
-        
+            dataTable.Clear(); //Clears the datatable for refreshing any changes   
             try
             {
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");//databaseconnection
@@ -53,16 +64,13 @@ namespace MicroHub
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void loadchart()
         {
             try
             {
-                
+
                 var users = chart1.Series.Add("Year 1");
                 users.ChartType = SeriesChartType.Line;
                 chart1.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
@@ -74,15 +82,18 @@ namespace MicroHub
                 {
                     double tempx = double.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
                     double tempy = double.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString());
-                    users.Points.AddXY(tempx,tempy);
+                    users.Points.AddXY(tempx, tempy);
                 }
-
             }
-
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            loadchart();
         }
 
 

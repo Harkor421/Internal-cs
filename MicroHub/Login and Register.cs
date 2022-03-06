@@ -27,9 +27,6 @@ namespace MicroHub
             textBox2.MaxLength = 10;
 
         }
-
-
-
         //No Flicker
         protected override CreateParams CreateParams
         {
