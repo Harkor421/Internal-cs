@@ -434,7 +434,6 @@ C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\Micro
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.Login_and_Register.resources
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.FirstCustomControl.resources
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.Form1.resources
-C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.Form2.resources
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.Properties.Resources.resources
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\Micro Hub.csproj.GenerateResource.cache
 C:\Users\sekes\OneDrive\Escritorio\optimizationapp - copia (2)\Internal-cs\MicroHub\obj\Release\MicroHub.exe.licenses

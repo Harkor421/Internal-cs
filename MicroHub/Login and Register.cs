@@ -24,7 +24,7 @@ namespace MicroHub
         {
             InitializeComponent();
             textBox2.PasswordChar = '*';
-            textBox2.MaxLength = 10;
+            textBox2.MaxLength = 16;
 
         }
         //No Flicker
@@ -59,34 +59,10 @@ namespace MicroHub
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form2 form = new Form2();
-            form.Show();
-            this.Hide();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://www.microhubco.com/");
-        }
 
         private void label7_Click(object sender, EventArgs e)
         {
             panel1.Show();
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-            Form2 form = new Form2();
-            form.Show();
-            this.Hide();
-        }
-
-        private void label4_Click_1(object sender, EventArgs e)
-        {
-            Process.Start("http://www.microhubco.com/mi-cuenta/");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -111,7 +87,6 @@ namespace MicroHub
                     Properties.Settings.Default.Save();
                     Console.WriteLine("Data deleted");
                 }
-
 
 
                 try //Try to see if there's connection with database, and catch any errors such as not typing in the textfields. 
@@ -144,7 +119,7 @@ namespace MicroHub
                             OleDbCommand cm = new OleDbCommand("select user_name from Users where user_email='" + textBox1.Text + "' and user_pass='" + enpass + "'", con); //Gets name of the user.
                             Global.name = cm.ExecuteScalar().ToString(); //The name of the user gets stored in a global variable.
                             Console.WriteLine(Global.name);
-                            Form2 form = new Form2();
+                            Form1 form = new Form1();
                             form.Show();
                             this.Hide();
                         }

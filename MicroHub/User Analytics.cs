@@ -30,11 +30,11 @@ namespace MicroHub
             
             OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");//databaseconnection
             con.Open();
-            OleDbCommand cmd = new OleDbCommand("SELECT COUNT (user_ID) FROM Users", con);
+            OleDbCommand cmd = new OleDbCommand("SELECT COUNT (user_ID) FROM Users", con); //Get amount of users
             String users = cmd.ExecuteScalar().ToString();
-            cmd = new OleDbCommand("SELECT COUNT (download_status) FROM Downloads WHERE download_status = 1;", con);
+            cmd = new OleDbCommand("SELECT COUNT (download_status) FROM Downloads WHERE download_status = 1;", con); // Get amount of users who have downloaded the application.
             String userdown = cmd.ExecuteScalar().ToString();
-            cmd = new OleDbCommand("SELECT COUNT (download_status) FROM Downloads", con);
+            cmd = new OleDbCommand("SELECT COUNT (download_status) FROM Downloads", con); //Get the amount of total downloads.
             String downloads = cmd.ExecuteScalar().ToString();
             label5.Text = userdown;
             label4.Text = users;
@@ -66,19 +66,19 @@ namespace MicroHub
             }
         }
 
-        private void loadchart()
+        private void loadchart() //Subprocedure to load linegraph.
         {
             try
             {
-
-                var users = chart1.Series.Add("Year 1");
+                //Chart settings.
+                var users = chart1.Series.Add("Year 1"); 
                 users.ChartType = SeriesChartType.Line;
                 chart1.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
                 chart1.ChartAreas[0].AxisY.MinorGrid.Enabled = false;
                 chart1.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
                 chart1.ChartAreas[0].AxisX.MinorGrid.Enabled = false;
 
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                for (int i = 0; i < dataGridView1.Rows.Count; i++) //Display data from datagrid in the chart
                 {
                     double tempx = double.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
                     double tempy = double.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString());

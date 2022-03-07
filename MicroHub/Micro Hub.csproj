@@ -243,9 +243,6 @@
     <Compile Include="Login and Register.Designer.cs">
       <DependentUpon>Login and Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProgressBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Main Page.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -257,12 +254,6 @@
     </Compile>
     <Compile Include="Main GUI.Designer.cs">
       <DependentUpon>Main GUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pantalla de Carga.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pantalla de Carga.Designer.cs">
-      <DependentUpon>Pantalla de Carga.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -298,9 +289,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main GUI.resx">
       <DependentUpon>Main GUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pantalla de Carga.resx">
-      <DependentUpon>Pantalla de Carga.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
