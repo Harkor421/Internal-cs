@@ -92,7 +92,7 @@ namespace MicroHub
 
             try
             {
-                DialogResult dialogResult = MessageBox.Show("You are about to delete a user permanently from the Database, are you sure?", "WARNING", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("You are about to delete a user permanently from the Database, are you sure?", "WARNING", MessageBoxButtons.YesNo); //dialog box
                 if (dialogResult == DialogResult.Yes)
                 {
 
@@ -106,7 +106,7 @@ namespace MicroHub
 
                     OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
                     con.Open();
-                    OleDbCommand cmd = new OleDbCommand("DELETE FROM Users WHERE user_ID=" + rowID + "", con);
+                    OleDbCommand cmd = new OleDbCommand("DELETE FROM Users WHERE user_ID=" + rowID + "", con); //deletes selected user from database
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("Deletion attempted");
                     con.Close();
@@ -135,9 +135,7 @@ namespace MicroHub
         private void button2_Click(object sender, EventArgs e)
         {
             String search = textBox1.Text;
-            loaddb(search);
-
-
+            loaddb(search); //Queries with the inputted parameter from search bar.
         }
     }
 }

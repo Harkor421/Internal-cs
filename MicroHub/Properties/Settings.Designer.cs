@@ -46,41 +46,5 @@ namespace MicroHub.Properties {
                 this["password"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool inicio {
-            get {
-                return ((bool)(this["inicio"]));
-            }
-            set {
-                this["inicio"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool whitemode {
-            get {
-                return ((bool)(this["whitemode"]));
-            }
-            set {
-                this["whitemode"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool netshconfig {
-            get {
-                return ((bool)(this["netshconfig"]));
-            }
-            set {
-                this["netshconfig"] = value;
-            }
-        }
     }
 }

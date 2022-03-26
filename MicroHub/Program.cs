@@ -11,20 +11,16 @@ namespace MicroHub
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+
         [STAThread]
         static void Main()
         {
 
-
+            //Tries connection with database before the application loads
             try
             {
 
                 OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
-
-
 
                 Console.WriteLine("Conected to Database");
 
@@ -33,12 +29,12 @@ namespace MicroHub
     
         
                 Console.WriteLine("EXECUTING LOG IN DATA");
-                Application.Run(new Login_and_Register());
+                Application.Run(new Login_and_Register()); //Opens Login form
 
             }
             catch
             {
-                Application.Run(new Form4());
+                Application.Run(new Form4()); //if unsuccessfull it will display the following forms 
             }
 
         }

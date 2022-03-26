@@ -28,7 +28,7 @@ namespace MicroHub
         {
             try
             {
-                chart1.Series.Clear();
+                chart1.Series.Clear(); //Clears graph.
                 OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseInternal1.accdb");
                 con.Open();
 
@@ -81,7 +81,7 @@ namespace MicroHub
 
 
         }
-
+        //Refresh
         private void button4_Click(object sender, EventArgs e)
         {
             loaddb();

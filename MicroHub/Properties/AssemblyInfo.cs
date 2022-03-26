@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Micro Hub")]
-[assembly: AssemblyDescription("Monitor y optimizador de sistemas operativos")]
+[assembly: AssemblyDescription("Administrator Panel")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Micro Hub SAS")]
 [assembly: AssemblyProduct("Micro Hub")]
-[assembly: AssemblyCopyright("Copyright © Micro Hub 2021")]
+[assembly: AssemblyCopyright("Copyright © Micro Hub 2022")]
 [assembly: AssemblyTrademark("@Microhub")]
 [assembly: AssemblyCulture("")]
 

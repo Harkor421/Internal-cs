@@ -80,8 +80,8 @@ namespace MicroHub
 
                 for (int i = 0; i < dataGridView1.Rows.Count; i++) //Display data from datagrid in the chart
                 {
-                    double tempx = double.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString());
-                    double tempy = double.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString());
+                    double tempx = double.Parse(dataGridView1.Rows[i].Cells[0].Value.ToString()); //Access the position in column 0
+                    double tempy = double.Parse(dataGridView1.Rows[i].Cells[1].Value.ToString()); //Access the position in column 1
                     users.Points.AddXY(tempx, tempy);
                 }
             }
@@ -95,7 +95,5 @@ namespace MicroHub
         {
             loadchart();
         }
-
-
     }
 }

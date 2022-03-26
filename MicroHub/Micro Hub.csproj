@@ -215,9 +215,6 @@
     <Compile Include="AppAnalytics.Designer.cs">
       <DependentUpon>AppAnalytics.cs</DependentUpon>
     </Compile>
-    <Compile Include="Button.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Comments.cs">
       <SubType>UserControl</SubType>
     </Compile>
